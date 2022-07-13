@@ -30,10 +30,10 @@ func Makerequest(options entities.Options) {
 	}
 	var response entities.Response
 	json.NewDecoder(resp.Body).Decode(&response)
-	defer resp.Body.Close()
 	fmt.Printf("\tRESPONSE: \n"+
 		"STATUS: "+resp.Status+
 		"\nRESPONSE: ", resp, "\n")
+	defer resp.Body.Close()
 }
 
 func ConvertDataToBytes(data interface{}) []byte {
