@@ -5,7 +5,6 @@ import (
 	"easy-gurl/internal/server"
 	"flag"
 	"fmt"
-	"os"
 )
 
 var options entities.Options
@@ -17,10 +16,10 @@ func main() {
 	howToUse()
 
 	server.Makerequest(options)
-	cmdArgs := os.Args[1:]
-	for i, opt := range cmdArgs {
-		fmt.Println(i, opt)
-	}
+	//cmdArgs := os.Args[1:]
+	//for i, opt := range cmdArgs {
+	//	fmt.Println(i, opt)
+	//}
 
 }
 func howToUse() {
